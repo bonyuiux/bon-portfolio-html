@@ -1,0 +1,13 @@
+.top-bar-container {
+    display: flex;
+    justify-content: end;
+}
+
+.top-bar {
+    display: flex;
+    gap: 2rem;
+}
+
+.top-bar > a {
+    font-size: large;
+}
