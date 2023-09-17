@@ -1,0 +1,43 @@
+body {
+    font-family: 'Antic Slab', serif;
+}
+
+.font-art {
+    font-family: 'Nothing You Could Do', cursive;
+}
+
+.ux-item-container > .ux-item-image {
+    width: 30rem;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+    background: #D9D9D9;
+}
+
+.ux-item-title {
+    font-size: large;
+    font-weight: bold;
+}
+
+.ux-view-all-btn {
+    color: black;
+    letter-spacing: 0.25rem;
+}
+
+@media (max-width: 1199.98px) { 
+
+    .ux-item-container > .ux-item-image {
+        width: 100%;
+    }
+}
+
+@media (max-width: 991.98px) { 
+
+}
+
+@media (max-width: 767.98px) { 
+
+}
+
+@media (max-width: 575.98px) { 
+
+}
