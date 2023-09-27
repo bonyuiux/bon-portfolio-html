@@ -1,11 +1,14 @@
+<script src="./js/include_icons_horizontal.js"></script>
+
 <footer>
     <div class="footer-content-container d-flex justify-content-between align-items-end container">
         <div class="d-flex flex-column justify-content-start align-items-end py-3 text-start">
             <p class="fs-3">Let's GET IN TOUCH !</p>
             <p class="w-100">bring your ideas to life</p>
+            <p id="contacts-icons-horizontal-container-mobile" class="w-100 d-block d-lg-none"></p>
         </div>
-        <div>
-
+        <div class="d-none d-lg-block">
+            <div id="contacts-icons-horizontal-container"></div>
         </div>
     </div>
 </footer>
@@ -23,5 +26,17 @@
 
     .footer-content-container {
         height: 100%;
+    }
+
+    @media (max-width: 1199.98px) {}
+
+    @media (max-width: 991.98px) {}
+
+    @media (max-width: 767.98px) {}
+
+    @media (max-width: 575.98px) {
+        footer {
+            flex-direction: column;
+        }
     }
 </style>
