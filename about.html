@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- insert google font cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Antic+Slab&family=Archivo&family=Great+Vibes&family=Libre+Baskerville&family=Lily+Script+One&family=Nothing+You+Could+Do&family=Nunito+Sans:wght@200&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <!-- insert CSS files -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+    <!-- insert JS files -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Custom js files-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="./js/include_about.js"></script>
+    <script src="./js/include_icons_vertical.js"></script>
+    <title>Bon's Studio</title>
+</head>
+
+<body>
+    <div id="header-container"></div>
+    <div class="main-content-container py-3">
+        <div class="container d-flex flex-column-reverse flex-lg-row py-5">
+            <div class="d-flex flex-column justify-content-center align-items-center pl-5">
+                <p class="fs-3 font-art">About me</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae amet, autem possimus molestias
+                    doloribus sunt accusamus eaque neque voluptate repellat deleniti sed? Architecto obcaecati
+                    consectetur temporibus atque provident doloribus quae!
+                </p>
+            </div>
+            <div class="about-image-container">
+                <div class="about-gradient-box">
+                    <img src="./image/about/sample.png" alt="box inside image" class="content-image">
+                    <img src="./image/about/gray-stick.svg" alt="topleft gary stick" class="first-stick">
+                    <img src="./image/about/gray-stick.svg" alt="bottomright gary stick" class="second-stick">
+                </div>
+            </div>
+        </div>
+        <div id="contacts-icons-vertical-container" class="d-none d-lg-block"></div>
+    </div>
+    <div id="footer-container"></div>
+</body>
+
+<style>
+    .about-image-container {
+        position: relative;
+        min-width: 60%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-image-container>.about-gradient-box {
+        margin: 1rem;
+        padding: 3% 3% 10% 3%;
+        position: relative;
+        width: 100%;
+        max-width: 25rem;
+        aspect-ratio: 1;
+        background: rgb(250, 201, 244);
+        background: linear-gradient(270deg, rgba(250, 201, 244, 0.3) 0%, rgba(221, 214, 225, 0.5) 6%, rgba(169, 234, 242, 0.5) 100%);
+    }
+
+    .about-image-container>.about-gradient-box>.content-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .about-image-container>.about-gradient-box>.first-stick,
+    .about-image-container>.about-gradient-box>.second-stick {
+        position: absolute;
+    }
+
+    .about-image-container>.about-gradient-box>.first-stick {
+        top: 0;
+        left: 0;
+        transform: translate(-45%, -45%);
+
+        @media (max-width: 25rem) {
+            transform: translate(-45%, -45%) scale(0.8);
+        }
+
+        @media (max-width: 20rem) {
+            transform: translate(-45%, -45%) scale(0.6);
+        }
+
+        @media (max-width: 15rem) {
+            transform: translate(-45%, -45%) scale(0.5);
+        }
+
+        @media (max-width: 12rem) {
+            transform: translate(-45%, -45%) scale(0.3);
+        }
+
+        @media (max-width: 5rem) {
+            transform: translate(-45%, -45%) scale(0.1);
+        }
+    }
+
+    .about-image-container>.about-gradient-box>.second-stick {
+        right: 0;
+        bottom: 0;
+        transform: translate(45%, 45%);
+
+        @media (max-width: 25rem) {
+            transform: translate(45%, 45%) scale(0.8);
+        }
+
+        @media (max-width: 20rem) {
+            transform: translate(45%, 45%) scale(0.6);
+        }
+
+        @media (max-width: 15rem) {
+            transform: translate(45%, 45%) scale(0.5);
+        }
+
+        @media (max-width: 12rem) {
+            transform: translate(45%, 45%) scale(0.3);
+        }
+
+        @media (max-width: 5rem) {
+            transform: translate(45%, 45%) scale(0.1);
+        }
+    }
+
+    .main-content-container {
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    .main-content-container #contacts-icons-vertical-container {
+        position: absolute;
+        right: 1rem;
+        bottom: 30%;
+        z-index: 2;
+    }
+</style>
+
+</html>

@@ -18,7 +18,8 @@ body {
     font-weight: bold;
 }
 
-.ux-view-all-btn {
+.ux-view-all-btn,
+.photography-view-all-btn {
     color: black;
     letter-spacing: 0.25rem;
 }

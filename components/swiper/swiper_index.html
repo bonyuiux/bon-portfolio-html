@@ -1,0 +1,151 @@
+<script src="../../assets/js/swiper-bundle.min.js"></script>
+<script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs'
+
+    const swiper = new Swiper('.swiper', {
+        speed: 400,
+        // due to the swiper being inside a hidden modal,if enable the next or previous
+        observer: true,
+        observeParents: true,
+        parallax: true,
+        // Navigation arrows
+        navigation: {
+            nextEl: '.next-and-prev-buttons .next',
+            prevEl: '.next-and-prev-buttons .prev',
+        },
+        slidesPerView: 1,
+        // Responsvie brackpoints
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+                initialSlide: 1,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+                initialSlide: 1,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+                initialSlide: 1,
+            },
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+        },
+        centeredSlides: true,
+        // centeredSlidesBounds: true,
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+
+    const nextButton = document.querySelector('.next-and-prev-buttons .next');
+    const prevButton = document.querySelector('.next-and-prev-buttons .prev');
+
+    nextButton.addEventListener('click', function () {
+        swiper.slideNext();
+    });
+
+    prevButton.addEventListener('click', function () {
+        swiper.slidePrev();
+    });
+</script>
+
+<div class="index-swiper-container">
+    <div class="title-container container font-art d-flex justify-content-end">
+        <p class="fs-3">PHOTOGRAPHY</p>
+        <img src="../image/arrow_vertical.svg" alt="arrow animation" class="arrow-vertical-image">
+    </div>
+    <div>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <div class="next-and-prev-buttons">
+                <div class="prev">
+                    <img src="../../image/swiper/prev_arrow.svg" alt="prev button">
+                </div>
+                <div class="next">
+                    <img src="../../image/swiper/next_arrow.svg" alt="next button">
+                </div>
+            </div>
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div>
+                        <img src="../../image/photography/sample.png" alt="sample">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <img src="../../image/photography/sample2.jpeg" alt="sample">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <img src="../../image/photography/sample.png" alt="sample">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <img src="../../image/photography/sample2.jpeg" alt="sample">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <img src="../../image/photography/sample.png" alt="sample">
+                    </div>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
+
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+    </div>
+    <div class="py-5 w-100">
+        <a class="text-center photography-view-all-btn font-art">
+            <p>View all photography</p>
+        </a>
+    </div>
+</div>
+
+<style>
+    .index-swiper-container>.title-container {
+        position: relative;
+    }
+
+    .index-swiper-container>.title-container>p {
+        margin-right: 3rem;
+    }
+
+    .index-swiper-container>.title-container>.arrow-vertical-image {
+        position: absolute;
+        right: 0;
+        transform: translateY(-95%) scaleX(-1);
+    }
+
+    .next-and-prev-buttons {
+        display: flex;
+        justify-content: end;
+        padding-right: 3rem;
+        padding-bottom: 1rem;
+        gap: 1rem;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        margin-bottom: 2rem;
+    }
+</style>
